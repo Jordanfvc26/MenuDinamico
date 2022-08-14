@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--ImageView para colocar la imagen de la cabecera-->
+    <ImageView
+        android:id="@+id/imgfondoCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/navheader"
+        android:scaleType="centerCrop" />
+
+    <!--TextView para colocar el nombre de usuario importado de la API-->
+    <TextView
+        android:id="@+id/nomUsuarioPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="usuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--TextView para colocar el correo de usuario importado de la API-->
+    <TextView
+        android:id="@+id/correoUsuarioPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="usuario@uteq.edu.ec"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textSize="14sp"
+        android:textStyle="" />
+
+    <!--Dar forma circular a la foto de perfil del usuario-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUsuarioPerfil"
+        android:layout_width="85dp"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/profesor"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+</FrameLayout>

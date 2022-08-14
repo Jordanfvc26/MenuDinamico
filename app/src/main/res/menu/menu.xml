@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_1"
+            android:icon="@drawable/iconalumnos"
+            android:title="item-1"/>
+        <item
+            android:id="@+id/menu_seccion_2"
+            android:icon="@drawable/iconlibro"
+            android:title="item-2"/>
+        <item
+            android:id="@+id/menu_seccion_3"
+            android:icon="@drawable/iconreloj"
+            android:title="item-3"/>
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Otras Opciones">
+        <menu>
+            <item
+                android:id="@+id/menu_opcion_1"
+                android:icon="@drawable/iconconfiguracion"
+                android:title="item-4"/>
+            <item
+                android:id="@+id/menu_opcion_2"
+                android:icon="@drawable/iconcerrarsesion"
+                android:title="item-5"/>
+        </menu>
+    </item>
+</menu>
