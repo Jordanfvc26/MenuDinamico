@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var navView: NavigationView
     lateinit var cabeceraDinamica: View
     var rolParaMenu = ""
+    lateinit var fragment: Fragment1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,23 +120,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(applicationContext, "Error en consumo de API usuarios", Toast.LENGTH_SHORT).show()
             })
         queue.add(stringRequest)
+
+        fragment = Fragment1()
+        getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.content_frame, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        /*when (item.itemId) {
-            android.R.id.home -> {
-                drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-                drawerLayout?.openDrawer(GravityCompat.START)
-                return true
-            }
-        }*/
-
         when(item.itemId) {
 
             else -> {
-                drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+                drawerLayout = findViewById(R.id.drawer_layout)
                 drawerLayout?.openDrawer(GravityCompat.START)
             }
         }
@@ -143,27 +143,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        /*when(item.itemId){
-            R.id.menu_seccion_1 -> Toast.makeText(this, "Mis Alumnos", Toast.LENGTH_SHORT).show()
-            R.id.menu_seccion_2 -> Toast.makeText(this, "Mis clases", Toast.LENGTH_SHORT).show()
-            R.id.menu_seccion_3 -> Toast.makeText(this, "Nueva Horarios", Toast.LENGTH_SHORT).show()
-        }
-        drawerLayout.closeDrawer(GravityCompat.START)*/
 
         when(rolParaMenu){
             "menu-estudiante"->{
-                when(item.itemId){
-                    else -> supportFragmentManager.beginTransaction().replace(R.id.content_frame, Fragment1()).commit()
-                }
+                fragment.setContent("Opción de estudiante, Item: " + item.itemId)
             }
             "menu-profesor"->{
-                when(item.itemId){
-                    else -> supportFragmentManager.beginTransaction().replace(R.id.content_frame, Fragment2()).commit()
-                }
+                fragment.setContent("Opción de profesor, Item: " + item.itemId)
             }
-            else -> supportFragmentManager.beginTransaction().replace(R.id.content_frame, Fragment3()).commit()
         }
-
+        item.setChecked(true)
+        getSupportActionBar()?.setTitle(item.getTitle());
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }

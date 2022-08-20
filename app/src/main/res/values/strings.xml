@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">MenuDinamico</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="texto_fragment1">Item de estudiante, seleccionado</string>
-    <string name="texto_fragment2">Item de profesor, seleccionado</string>
-    <string name="texto_fragment3">Item del menú, seleccionado</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
