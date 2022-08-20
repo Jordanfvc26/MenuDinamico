@@ -20,8 +20,8 @@ Opciones de menú del usuario con Rol Estudiante
 ![menu-estudiante-opciones](https://user-images.githubusercontent.com/85135664/184521373-e575474c-0ca0-46fd-aea1-05f3f9681c1c.jpeg)
 
 
-Mensaje cuando se selecciona un item del menu de Estudiante (Fragment)
-![seleccion-item-menu-estudiante](https://user-images.githubusercontent.com/85135664/184521383-ba2b04de-d18c-4f2e-be33-85bdc36407f1.jpeg)
+Mensaje del Fragment y seteo del titulo del toolbar cuando se selecciona un item del menu de Estudiante
+![Fragment_con_Item_Estudiante](https://user-images.githubusercontent.com/85135664/185731770-6a0e2501-f4ec-4a21-936c-7c1363641bbc.jpeg)
 
 
 
@@ -39,8 +39,8 @@ Opciones de menú del usuario con Rol Profesor
 ![menu-profesor-opciones](https://user-images.githubusercontent.com/85135664/184521434-105fe264-feb8-4d66-b38b-9b19e80c12b3.jpeg)
 
 
-Mensaje cuando se selecciona un item del menu de Profesor (Fragment)
-![seleccion-item-menu-profesor](https://user-images.githubusercontent.com/85135664/184521447-f3e2f8da-6492-4983-8c72-0221804b4589.jpeg)
+Mensaje del Fragment y seteo del titulo del toolbar cuando se selecciona un item del menu de Estudiante
+![Fragment_con_Item_Profesor](https://user-images.githubusercontent.com/85135664/185731801-b3abbdf5-661c-4747-a736-71ee73234b6a.jpeg)
 
 
 Mnesaje de error si el usuario que inicia sesión no existe
